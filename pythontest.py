@@ -21,7 +21,7 @@ StartNum =0
 a =0
 # Variable "s" to hold the next number value in the list
 s =0
-# Everything with "*_2d" is to hold the formatted value to 2 decimal places
+# Everything with "*_2d" is a variable to hold the amount formatted in US dollars
 
 # The below asks for the original balance, enters it into "StartNum"
 # If the user enters something other than a number, keep asking for one.
@@ -126,9 +126,3 @@ print ("\n###################################################")
 print("Total remaining balance =",numtotal_2d)
 print ("###################################################")
 print ("\n")
-
-
-
-
-	
-
