@@ -52,7 +52,7 @@ while True:
 		# no error, stop the loop
 		break
 
-# Format the float to 2 decimal places, place it in variable Num1_2d
+# Format the float US Currency, place it in variable Num1_2d
 Num1_2d = locale.currency(Num1, grouping =True)
 
 
@@ -106,7 +106,6 @@ else:
 	
 #Subtract the "sumlist" (unformatted) from the "StartNum", save in in variable "numtotal" 
 numtotal = StartNum - sumlist
-
 
 # Formatting "numtotal" for printing purposes
 numtotal_2d = locale.currency(numtotal, grouping =True)
