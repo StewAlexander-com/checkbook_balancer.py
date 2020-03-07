@@ -10,7 +10,7 @@ Simple Python script to balance one's checkbook
 Now more [poka-yoke](https://asq.org/quality-resources/mistake-proofing)</br>
 - [x] Instead assume user wants another number until equal sign is typed (tell user this behavior up front)
 - [ ] Give user the ability to quit with “q”
-- [ ] Give user ability to save final results with “s”
+- [ ] Give user ability to save final results with “s” as a CSV file
 - [ ] Give user ability to edit mistakes 
 - [ ] Running total?
 ---
