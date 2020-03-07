@@ -35,6 +35,7 @@ while True:
 	try:
 		StartNum = float(input("\nWhat is your orginal balance?  "))
 	except ValueError:
+		# If the input was something other than a number / float)
 		print ("\n--- Sorry, we didn't understand the input ---\n")
 	else:
 		# no error, stop the loop
@@ -64,27 +65,34 @@ nlist.append(Num1_2d)
 
 # Ask if there is another number to add to the list from the user 
 
-a = 'Y'
 a = input("Any more debit / deposits? Y/N  ")
 
-# Keep asking the user for another number untill the user has no further numbers
+# If the answer is yes, then request further inputs
 
-while a in ['Y', 'y']:
+if a in ['Y','y']:
+	print ("(Use a \"-\" for deposit, or \"=\" when finished)\n")
 	while True:
+		amount_input = input(">   ")
+		
+		# If the amount is a float / number:
+		
 		try:
-			s = float(input("Next debit / desposit (use a - for deposit) ?  "))
+			s = float(amount_input)
 			# Format the float to US Currency, place it in variable s_2d
 			s_2d = locale.currency(s, grouping =True)
+			isum.append(s)
+			nlist.append(s_2d)
+			
+		#If the input is an '=', end the loop
+			
 		except ValueError:
-			print ("\n--- Sorry we didn't understand the input ---\n")
-		else:
-			# no error, stop the loop
-			break 
-	a = input("Any more debits / deposits? Y/N  ")
-	isum.append(s)
-	nlist.append(s_2d)
-	if a not in ['Y', 'y']:
-		break 
+			if amount_input == "=":
+				break
+				
+		#if the input is junk:
+				
+			else:
+				print ("\n--- Sorry we didn't understand the input ---\n")
 
 #Sum the list (to get around type issues, using the unformatted "s" list in "isum")
 sumlist = sum(isum)
