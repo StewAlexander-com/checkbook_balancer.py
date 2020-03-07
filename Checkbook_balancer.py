@@ -65,7 +65,7 @@ nlist.append(Num1_2d)
 
 # Ask if there is another number to add to the list from the user 
 
-a = input("Any more debit / deposits? Y/N  ")
+a = input("\nAny more debit / deposits? Y/N  ")
 
 # If the answer is yes, then request further inputs
 
