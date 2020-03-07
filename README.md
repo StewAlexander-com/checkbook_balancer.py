@@ -16,7 +16,7 @@ At  the moment the script keeps asking you for another number, annoying and not 
 ---
 Output _as of 03/07/2020_:
 ```
-home@mac-mini ~/Desktop> ./checkbook.py
+> ./checkbook.py
 
 This program very simply balances your checkbook
 It will ask you for your orignal balance and any debits
