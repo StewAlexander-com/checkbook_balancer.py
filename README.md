@@ -1,6 +1,6 @@
 # Checkbook_balancer.py
 
-Simple program to balance one's checkbook
+Simple Python script to balance one's checkbook
 
 -----
 
