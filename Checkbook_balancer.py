@@ -114,7 +114,7 @@ sumlist_2d = locale.currency(sumlist, grouping =True)
 print("\n--------------------------------------------------------------")
 
 #Printing the formatted list, and the formatted total
-if len(nlist) > 3:
+if len(nlist) > 4:
 	print ("\nThe numbers you entered are:\n")
 	for x in range(len(nlist)):
 		print(nlist[x])
