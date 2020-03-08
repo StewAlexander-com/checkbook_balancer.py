@@ -14,33 +14,45 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 
 **Current output _as of 03/08/202_**
 ```
-home@mac-mini ~/Desktop> ./checkbook.py
+> ./checkbook.py
 
 This program very simply balances your checkbook
 It will ask you for your orignal balance and any debits
 - If you have a deposit, put a minus sign in front of the number
 
-What is your orginal balance?  2100
-What is the first debit (if deposit put a -)?  120
+What is your orginal balance? > 3400
 
-Any more debit / deposits? Y/N  y
+What is the first debit (if deposit put a -)?
+> 220.26
+
+Any more debit / deposits? Y/N
+> y
 (Use a "-" for deposits, "=" when done, or "q" to quit)
-
->   340
+>   3400
+>   -7600
 >   210
->   15
+>   34
+>   2
 >   =
 
 --------------------------------------------------------------
 
-The numbers you entered are ['$120.00', '$340.00', '$210.00', '$15.00']
-A Total debit of  $685.00
+The numbers you entered are:
+
+$220.26
+$3,400.00
+-$7,600.00
+$210.00
+$34.00
+$2.00
+---------
+A total deposit of:  $3,733.74
 
 
 From what you entered:
-$2,100.00 - $685.00 = $1,415.00
+$3,400.00 + $3,733.74 = $7,133.74
 
 ###################################################
-Total remaining balance = $1,415.00
-###################################################
+Total remaining balance = $7,133.74
+###################################################```
 ```
