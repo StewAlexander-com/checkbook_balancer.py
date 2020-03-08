@@ -59,7 +59,7 @@ Total remaining balance = $7,133.74
 ```
 ---
 
-**Current output _as of 03/08/2020_  if debits / deposits if 4 or less:**
+**Current output _as of 03/08/2020_  if debits / deposits is 4 or less:**
 ```
 > ./checkbook.py
 
