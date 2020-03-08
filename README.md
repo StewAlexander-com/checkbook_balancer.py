@@ -56,4 +56,38 @@ $3,400.00 + $3,733.74 = $7,133.74
 Total remaining balance = $7,133.74
 ###################################################```
 ```
+---
 
+**Current output _as of 03/08/202_  if debits / deposits less than 4:**
+```
+> ./checkbook.py
+
+This program very simply balances your checkbook
+It will ask you for your orignal balance and any debits
+- If you have a deposit, put a minus sign in front of the number
+
+What is your orginal balance? > 3400
+
+What is the first debit (if deposit put a -)?
+> 12
+
+Any more debit / deposits? Y/N
+> y
+(Use a "-" for deposits, "=" when done, or "q" to quit)
+>   210
+>   2
+>   =
+
+--------------------------------------------------------------
+
+The numbers you entered are: ['$12.00', '$210.00', '$2.00']
+A Total debit of:  $224.00
+
+
+From what you entered:
+$3,400.00 - $224.00 = $3,176.00
+
+###################################################
+Total remaining balance = $3,176.00
+###################################################
+```
