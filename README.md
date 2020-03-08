@@ -12,7 +12,7 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 
 ----
 
-**Current output _as of 03/08/202_**
+**Current output _as of 03/08/202_  if debits / deposits greater than 4:**
 ```
 > ./checkbook.py
 
@@ -56,3 +56,4 @@ $3,400.00 + $3,733.74 = $7,133.74
 Total remaining balance = $7,133.74
 ###################################################```
 ```
+
