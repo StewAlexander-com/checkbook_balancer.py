@@ -5,7 +5,7 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 
 - [x] Instead assume user wants another number until equal sign is typed (tell user this behavior up front)
 - [x] Give user the ability to quit with “q”
-- [x] If list of numbers is greater than 3, send each to a new line
+- [x] If list of numbers is greater than 4, send each to a new line
 - [ ] Give user ability to save final results with “s”” to a .cvs  file
 - [ ] Give user ability to edit mistakes 
 - [ ] Running total?
