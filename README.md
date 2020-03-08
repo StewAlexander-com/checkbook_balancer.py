@@ -11,7 +11,7 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 
 ----
 
-## Current output _as of 03/08/2020 
+## Current output _as of 03/08/2020_
 ```
 home@mac-mini ~/Desktop> ./checkbook.py
 
