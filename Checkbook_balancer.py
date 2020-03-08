@@ -36,7 +36,7 @@ print ("- If you have a deposit, put a minus sign in front of the number")
 
 while True:
 	try:
-		StartNum = float(input("\nWhat is your orginal balance?  "))
+		StartNum = float(input("\nWhat is your orginal balance? > "))
 	except ValueError:
 		# If the input was something other than a number / float)
 		print ("\n--- Sorry, we didn't understand the input ---\n")
@@ -49,7 +49,7 @@ while True:
 
 while True:
 	try:
-		Num1 = float(input("What is the first debit (if deposit put a -)?  "))
+		Num1 = float(input("\nWhat is the first debit (if deposit put a -)? \n> "))
 	except ValueError:
 		print ("\n--- Sorry, we didn't understand the input ---\n")
 	else:
@@ -68,12 +68,14 @@ nlist.append(Num1_2d)
 
 # Ask if there is another number to add to the list from the user 
 
-a = input("\nAny more debit / deposits? Y/N  ")
+a = input("\nAny more debit / deposits? Y/N \n> ")
+
+print ("\n")
 
 # If the answer is yes, then request further inputs
 
 if a in ['Y','y']:
-	print ("(Use a \"-\" for deposits, \"=\" when done, or \"q\" to quit)\n")
+	print ("(Use a \"-\" for deposits, \"=\" when done, or \"q\" to quit)")
 	while True:
 		amount_input = input(">   ")
 		
@@ -112,13 +114,20 @@ sumlist_2d = locale.currency(sumlist, grouping =True)
 print("\n--------------------------------------------------------------")
 
 #Printing the formatted list, and the formatted total
-print ("\nThe numbers you entered are", nlist)
+if len(nlist) > 3:
+	print ("\nThe numbers you entered are:\n")
+	for x in range(len(nlist)):
+		print(nlist[x])
+	print ("---------")
+else:
+	print ("\nThe numbers you entered are:", nlist)
+
 if sumlist > 0:
-	print ("A Total debit of ",sumlist_2d)
+	print ("A Total debit of: ",sumlist_2d)
 else:
 	dep_sumlist = - sumlist
 	depsumlist_2d = locale.currency(dep_sumlist, grouping =True)
-	print ("A total deposit of ",depsumlist_2d)
+	print ("A total deposit of: ",depsumlist_2d)
 	
 #Subtract the "sumlist" (unformatted) from the "StartNum", save in in variable "numtotal" 
 numtotal = StartNum - sumlist
