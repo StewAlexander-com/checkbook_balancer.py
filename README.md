@@ -27,6 +27,7 @@ What is the first debit (if deposit put a -)?
 
 Any more debit / deposits? Y/N
 > y
+
 (Use a "-" for deposits, "=" when done, or "q" to quit)
 >   3400
 >   -7600
