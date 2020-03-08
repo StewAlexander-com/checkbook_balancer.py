@@ -6,7 +6,7 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 - [x] Assume user wants another number until equal sign is typed (tell user this behavior up front)
 - [x] Give user the ability to quit with “q”
 - [x] If list of debits / deposits is greater than 4, send each formatted amount to a new line
-- [ ] Give user ability to save final results with “s”” to a .cvs  file
+- [ ] Give user ability to save final results with “s” to a .cvs  file
 - [ ] Give user ability to edit mistakes 
 - [ ] Running total?
 
