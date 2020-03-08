@@ -10,6 +10,9 @@ import locale
 locale.setlocale( locale.LC_ALL, '')
 'English_United States.1252'
 
+# for exiting the program on a letter
+import sys
+
 # Variable "nlist" that contains an empty list, isum to get around type issues.
 nlist =[]
 isum =[]
@@ -29,7 +32,7 @@ s =0
 # Header
 print("\nThis program very simply balances your checkbook")
 print("It will ask you for your orignal balance and any debits")
-print ("If you have a deposit, add a minus sign in front of the number")
+print ("- If you have a deposit, put a minus sign in front of the number")
 
 while True:
 	try:
@@ -70,7 +73,7 @@ a = input("\nAny more debit / deposits? Y/N  ")
 # If the answer is yes, then request further inputs
 
 if a in ['Y','y']:
-	print ("(Use a \"-\" for deposit, or \"=\" when finished)\n")
+	print ("(Use a \"-\" for deposits, \"=\" when done, or \"q\" to quit)\n")
 	while True:
 		amount_input = input(">   ")
 		
@@ -88,6 +91,11 @@ if a in ['Y','y']:
 		except ValueError:
 			if amount_input == "=":
 				break
+				
+		#If the user types "q", just exit the program without continuing		
+				
+			elif amount_input =="q":
+				sys.exit("\nQuitting...")
 				
 		#if the input is junk:
 				
