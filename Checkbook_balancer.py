@@ -68,6 +68,7 @@ nlist.append(Num1_2d)
 
 # Ask if there is another number to add to the list from the user 
 
+
 a = input("\nAny more debit / deposits? Y/N \n> ")
 
 print ("\n")
@@ -150,3 +151,12 @@ print ("\n###################################################")
 print("Total remaining balance =",numtotal_2d)
 print ("###################################################")
 print ("\n")
+
+#saveqt = input ("Would you like to save this information as a CVS file? Y/N?\n> ")
+#if saveqt in ['Y','y']:
+#	print("Saving ...")
+	
+	# CSV Code to be put here
+	
+#else:
+#	sys.exit("\nQuitting...")
