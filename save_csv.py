@@ -1,13 +1,18 @@
-nlist =['$210.00','$4,150.30','$37.38']
-Nfile =open('checkbook.csv','w')
+import csv
+
+nlist =["$210.00","$4150.30","$37.38"]
 numtotal_2d ="$4,500"
+StartNum_2d ="$6,500.00"
 
-#Save elements to a file separated by a ","
-for element in  nlist:
-	Nfile.write(element)
-	Nfile.write(',')
-Nfile.close()
+with open('checkbook.csv', 'w') as fd:
+	fd.write(StartNum_2d)
+	fd.write("\n")
 
-#Append the total
-with open('checkbook.csv', 'a') as Nfile:
-	Nfile.write(numtotal_2d)
+with open('checkbook.csv', 'a') as f:
+	writer = csv.writer(f)
+	for e in nlist:
+		writer.writerow([e])
+
+with open('checkbook.csv', 'a') as fd:
+	fd.write("----------\n")
+	fd.write(numtotal_2d)
