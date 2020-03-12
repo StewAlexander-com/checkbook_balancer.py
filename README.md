@@ -6,11 +6,16 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 - [x] Assume user wants another number until equal sign is typed (tell user this behavior up front)
 - [x] Give user the ability to quit with “q”
 - [x] If list of debits / deposits is greater than 4, send each formatted amount to a new line
-- [ ] Give user ability to save final results with “s” to a .cvs  file
-- [ ] Give user ability to edit mistakes 
+- [ ] Give user ability to save final results with “s” to a CSV  file
+- [ ] Functionalize code (make function calls within switch statements and loops)
+- [ ] Give user ability to edit mistakes
 - [ ] Running total?
 
 ----
+### Long term goals
+- [] Use the ncurses library to provide a graphical interface for the command line
+- [] Add other functions outside of sum (avg, mode, median, etc)
+
 
 **Current output _as of 03/08/2020_  if debits / deposits greater than 4:**
 ```
