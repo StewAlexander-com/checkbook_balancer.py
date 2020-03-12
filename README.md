@@ -13,8 +13,8 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 
 ----
 ### Long term goals
-- [] Use the ncurses library to provide a graphical interface for the command line
-- [] Add other functions outside of sum (avg, mode, median, etc)
+- [ ] Use the ncurses library to provide a graphical interface for the command line
+- [ ] Add other functions outside of sum (avg, mode, median, etc)
 
 
 **Current output _as of 03/08/2020_  if debits / deposits greater than 4:**
