@@ -177,6 +177,7 @@ if saveqt in ['Y','y']:
 	# Create a column with the starting value, the list of inputs, and the total
 	
 	with open('Checkbook.txt', 'w') as fd:
+		fd.write("Original Bal: ")
 		fd.write(StartNum_2d)
 		fd.write("\n----------\n")
 
@@ -200,7 +201,7 @@ if saveqt in ['Y','y']:
 
 	with open('Checkbook.txt', 'a') as fd:
 		fd.write("----------\n")
-		fd.write("Sum = ")
+		fd.write("Total = ")
 		fd.write(numtotal_2d)
 	
 	sys.exit("\nSaved, quitting...")
