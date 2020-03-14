@@ -73,7 +73,7 @@ Saved, quitting...
 ```
 **Output of the above to _Checkbook.txt_** 
 ```
-340.54
+Orginal Bal: 340.54
 ----------
 -$12.23
 -$1.23
