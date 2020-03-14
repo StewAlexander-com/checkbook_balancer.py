@@ -7,10 +7,8 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 - [x] Gives user the ability to quit with “q”
 - [x] If list of debits / deposits is greater than 4, send each formatted amount to a new line
 - [x] Gives user ability to save final results to a file
-- [ ] Format as a CSV
 - [ ] Functionalize code (make function calls within switch statements and loops)
 - [ ] Give user ability to edit mistakes
-- [ ] Running total?
 
 ----
 ### Long term goals
