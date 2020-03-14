@@ -168,7 +168,7 @@ if saveqt in ['Y','y']:
 	#if the Checkbook.txt exists delete it
 	if os.path.exists(Current_chkbtxt):
 		os.remove(Current_chkbtxt)
-		print ("\n-- Removed current Checkbook.txt --\n")
+		print ("\n-- Removed previous Checkbook.txt --\n")
 	else:
 		print ("\n")
 
@@ -184,7 +184,7 @@ if saveqt in ['Y','y']:
 		writer = csv.writer(f)
 		
 		#Multiply the values in isum by -1, save in nlist_min
-		# Solves the debt logic in the program so the output looks correct
+		#Solves the debt logic in the program so the output looks correct
 		
 		nlist_min = [i * -1 for i in isum]
 		
