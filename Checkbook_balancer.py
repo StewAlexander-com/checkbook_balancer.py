@@ -19,6 +19,7 @@ import csv
 # Variable "nlist" that contains an empty list, isum to get around type issues.
 nlist =[]
 isum =[]
+nlistmin_2d =[]
 # Variable "sumlist" that contains the sum of the list
 sumlist=0
 # Variable "StartnNum" Original banking balance
@@ -167,12 +168,25 @@ if saveqt in ['Y','y']:
 
 	with open('Checkbook.txt', 'a') as f:
 		writer = csv.writer(f)
-		for e in nlist:
+		
+		#Multiply the values in isum by -1, save in nlist_min
+		#Solves the debt logic in the program so the output in the file looks correct
+		
+		nlist_min = [i * -1 for i in isum]
+		
+		#Convert nlist_min into US dollars, and save in nlist_min_2d
+		for e in nlist_min:
+			e2 = locale.currency(e, grouping =True)
+			nlistmin_2d.append(e2)
+		
+		#Print nlist_min_2d to Checkbook.txt
+		
+		for e in nlistmin_2d:
 			writer.writerow([e])
 
 	with open('Checkbook.txt', 'a') as fd:
 		fd.write("----------\n")
-		fd.write("= ")
+		fd.write("Sum = ")
 		fd.write(numtotal_2d)
 	
 	sys.exit("\nSaved, quitting...")
