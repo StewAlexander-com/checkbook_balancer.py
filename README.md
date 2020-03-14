@@ -72,7 +72,8 @@ Saving data to Checkbook.txt ...
 Saved, quitting...
 ```
 **Output of the above to _Checkbook.txt_** 
-```340.54
+```
+340.54
 ----------
 -$12.23
 -$1.23
