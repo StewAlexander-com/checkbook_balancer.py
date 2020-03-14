@@ -13,6 +13,9 @@ locale.setlocale( locale.LC_ALL, '')
 # for exiting the program on a letter
 import sys
 
+#For saving the created contents to a CSV file
+import csv
+
 # Variable "nlist" that contains an empty list, isum to get around type issues.
 nlist =[]
 isum =[]
@@ -152,11 +155,27 @@ print("Total remaining balance =",numtotal_2d)
 print ("###################################################")
 print ("\n")
 
-#saveqt = input ("Would you like to save this information as a CVS file? Y/N?\n> ")
-#if saveqt in ['Y','y']:
-#	print("Saving ...")
+saveqt = input ("Would you like to save this information Y/N?\n> ")
+if saveqt in ['Y','y']:
+	print("Saving to Checkbook.txt ...")
 	
-	# CSV Code to be put here
+	# Create a column with the starting value, the list of inputs, and the total
 	
-#else:
-#	sys.exit("\nQuitting...")
+	with open('Checkbook.txt', 'w') as fd:
+		fd.write(StartNum_2d)
+		fd.write("\n----------\n")
+
+	with open('Checkbook.txt', 'a') as f:
+		writer = csv.writer(f)
+		for e in nlist:
+			writer.writerow([e])
+
+	with open('Checkbook.txt', 'a') as fd:
+		fd.write("----------\n")
+		fd.write("= ")
+		fd.write(numtotal_2d)
+	
+	sys.exit("\nSaved, quitting...")
+	
+else:
+	sys.exit("\nQuitting...")
