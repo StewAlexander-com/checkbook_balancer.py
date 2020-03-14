@@ -18,7 +18,7 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 - [ ] Add other functions outside of sum (avg, mode, median, etc)
 
 
-**Current output _as of 03/08/2020_  if debits / deposits greater than 4:**
+**Current output _as of 03/14/2020**
 ```
 > ./checkbook.py
 
@@ -26,76 +26,47 @@ This program very simply balances your checkbook
 It will ask you for your orignal balance and any debits
 - If you have a deposit, put a minus sign in front of the number
 
-What is your orginal balance? > 3400
+What is your orginal balance? > 6000
 
 What is the first debit (if deposit put a -)?
-> 220.26
+> 400
 
 Any more debit / deposits? Y/N
 > y
 
+
 (Use a "-" for deposits, "=" when done, or "q" to quit)
->   3400
->   -7600
->   210
->   34
->   2
+>   50
+>   50
 >   =
 
 --------------------------------------------------------------
 
-The numbers you entered are:
-
-$220.26
-$3,400.00
--$7,600.00
-$210.00
-$34.00
-$2.00
----------
-A total deposit of:  $3,733.74
+The numbers you entered are: ['$400.00', '$50.00', '$50.00']
+A Total debit of:  $500.00
 
 
 From what you entered:
-$3,400.00 + $3,733.74 = $7,133.74
+$6,000.00 - $500.00 = $5,500.00
 
 ###################################################
-Total remaining balance = $7,133.74
-###################################################```
-```
----
+Total remaining balance = $5,500.00
+###################################################
 
-**Current output _as of 03/08/2020_  if debits / deposits is 4 or less:**
-```
-> ./checkbook.py
 
-This program very simply balances your checkbook
-It will ask you for your orignal balance and any debits
-- If you have a deposit, put a minus sign in front of the number
-
-What is your orginal balance? > 3400
-
-What is the first debit (if deposit put a -)?
-> 12
-
-Any more debit / deposits? Y/N
+Would you like to save this information Y/N?
 > y
+Saving to Checkbook.txt ...
 
-(Use a "-" for deposits, "=" when done, or "q" to quit)
->   210
->   2
->   =
-
---------------------------------------------------------------
-
-The numbers you entered are: ['$12.00', '$210.00', '$2.00']
-A Total debit of:  $224.00
-
-
-From what you entered:
-$3,400.00 - $224.00 = $3,176.00
-
-###################################################
-Total remaining balance = $3,176.00
-###################################################
+Saved, quitting...
+```
+**Output of the above to _Checkbook.txt_** 
+```
+$6,000.00
+----------
+-$400.00
+-$50.00
+-$50.00
+----------
+Sum = $5,500.00
 ```
