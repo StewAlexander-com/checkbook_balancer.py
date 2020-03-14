@@ -16,6 +16,9 @@ import sys
 #For saving the created contents to a CSV file
 import csv
 
+#for deleting Checkbook.txt if it exists before saving new data
+import os
+
 # Variable "nlist" that contains an empty list, isum to get around type issues.
 nlist =[]
 isum =[]
@@ -156,9 +159,20 @@ print("Total remaining balance =",numtotal_2d)
 print ("###################################################")
 print ("\n")
 
+Current_chkbtxt = './Checkbook.txt'
+
+
 saveqt = input ("Would you like to save this information Y/N?\n> ")
 if saveqt in ['Y','y']:
-	print("Saving to Checkbook.txt ...")
+	
+	#if the Checkbook.txt exists delete it
+	if os.path.exists(Current_chkbtxt):
+		os.remove(Current_chkbtxt)
+		print ("\n-- Removed current Checkbook.txt --\n")
+	else:
+		print ("\n")
+
+	print("Saving data to Checkbook.txt ...")
 	
 	# Create a column with the starting value, the list of inputs, and the total
 	
@@ -170,7 +184,7 @@ if saveqt in ['Y','y']:
 		writer = csv.writer(f)
 		
 		#Multiply the values in isum by -1, save in nlist_min
-		#Solves the debt logic in the program so the output in the file looks correct
+		# Solves the debt logic in the program so the output looks correct
 		
 		nlist_min = [i * -1 for i in isum]
 		
