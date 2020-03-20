@@ -20,7 +20,7 @@ Don't know Python? Start [here](https://www.pythoncheatsheet.org/) or [here](htt
 - [ ] Add other functions outside of sum (avg, mode, median, etc)
 
 
-**Current output _as of 03/20/2020**
+**Current output _as of 03/20/2020_**
 ```
 > ./checkbook.py
 
