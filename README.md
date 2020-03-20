@@ -20,47 +20,40 @@ Don't know Python? Start [here](https://www.pythoncheatsheet.org/) or [here](htt
 - [ ] Add other functions outside of sum (avg, mode, median, etc)
 
 
-**Current output _as of 03/14/2020**
+**Current output _as of 03/20/2020**
 ```
 > ./checkbook.py
+
 This program very simply balances your checkbook
 It will ask you for your orignal balance and any debits
 - If you have a deposit, put a minus sign in front of the number
 
-What is your orginal balance? > 340.54
+What is your orginal balance? > 500
 
 What is the first debit (if deposit put a -)? 
-> 12.23
+> 100
 
 Any more debit / deposits? Y/N 
 > y
 
 
 (Use a "-" for deposits, "=" when done, or "q" to quit)
->   1.23
->   34.56
->   -120
->   -86.23
+>   50
+>   50
+>   100
 >   =
 
 --------------------------------------------------------------
 
-The numbers you entered are:
-
-$12.23
-$1.23
-$34.56
--$120.00
--$86.23
----------
-A total deposit of:  $158.21
+The numbers you entered are: ['$100.00', '$50.00', '$50.00', '$100.00']
+A Total debit of:  $300.00
 
 
 From what you entered:
-$340.54 + $158.21 = $498.75
+$500.00 - $300.00 = $200.00
 
 ###################################################
-Total remaining balance = $498.75
+Total remaining balance = $200.00
 ###################################################
 
 
@@ -72,16 +65,19 @@ Would you like to save this information Y/N?
 Saving data to Checkbook.txt ...
 
 Saved, quitting...
+support@support-VirtualBox ~/Desktop> 
+
 ```
-**Output of the above to _Checkbook.txt_** 
+**Output of the above (_as of 03/20/2020_) to _Checkbook.txt_** 
 ```
-Orginal Bal: 340.54
-----------
--$12.23
--$1.23
--$34.56
-$120.00
-$86.23
-----------
-Total = $498.75
+> cat Checkbook.txt 
+"+------------------+
+| Org Bal: $500.00 |
++------------------+
+|     -$100.00     |
+|     -$50.00      |
+|     -$50.00      |
+|     -$100.00     |
++------------------+"
+Total = $200.00⏎           
 ```
