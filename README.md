@@ -9,6 +9,7 @@ Don't know Python? Start [here](https://www.pythoncheatsheet.org/) or [here](htt
 - [x] Gives user the ability to quit with “q”
 - [x] If list of debits / deposits is greater than 4, send each formatted amount to a new line
 - [x] Gives user ability to save final results to a file
+- [ ]Take data and print it using the "pretty table" library (looks better on screen, creates room for future development)
 - [ ] Functionalize code (make function calls within switch statements and loops)
 - [ ] Give user ability to edit mistakes
 
