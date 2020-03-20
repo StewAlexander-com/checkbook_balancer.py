@@ -79,5 +79,5 @@ support@support-VirtualBox ~/Desktop>
 |     -$50.00      |
 |     -$100.00     |
 +------------------+"
-Total = $200.00⏎           
+Total = $200.00           
 ```
