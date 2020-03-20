@@ -182,10 +182,9 @@ if saveqt in ['Y','y']:
 	
 	# Create a column with the starting value, the list of inputs, and the total
 	
-	Org_bal = "Org Bal: "
-	
 	# Creating first row, by concatinating the stings, ex. Org Bal: $50.32
 	
+	Org_bal = "Org Bal: "
 	first_row = Org_bal + StartNum_2d
 	
 	# Entering the string as the first row to the table
