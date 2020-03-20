@@ -19,6 +19,12 @@ import csv
 #for deleting Checkbook.txt if it exists before saving new data
 import os
 
+# Import PrettyTable for ascii printing
+from prettytable import PrettyTable
+
+# Creating table with function PrettyTable
+t = PrettyTable()
+
 # Variable "nlist" that contains an empty list, isum to get around type issues.
 nlist =[]
 isum =[]
@@ -159,8 +165,8 @@ print("Total remaining balance =",numtotal_2d)
 print ("###################################################")
 print ("\n")
 
+#Creating a variable to store the current file location
 Current_chkbtxt = './Checkbook.txt'
-
 
 saveqt = input ("Would you like to save this information Y/N?\n> ")
 if saveqt in ['Y','y']:
@@ -176,10 +182,10 @@ if saveqt in ['Y','y']:
 	
 	# Create a column with the starting value, the list of inputs, and the total
 	
-	with open('Checkbook.txt', 'w') as fd:
-		fd.write("Original Bal: ")
-		fd.write(StartNum_2d)
-		fd.write("\n----------\n")
+	Org_bal = "Org Bal: "
+	first_row = Org_bal + StartNum_2d
+	
+	t = PrettyTable ([first_row])
 
 	with open('Checkbook.txt', 'a') as f:
 		writer = csv.writer(f)
@@ -194,13 +200,13 @@ if saveqt in ['Y','y']:
 			e2 = locale.currency(e, grouping =True)
 			nlistmin_2d.append(e2)
 		
-		#Print nlist_min_2d to Checkbook.txt
+		#Print nlist_min_2d to Checkbook.txt as a PrettyTable
 		
 		for e in nlistmin_2d:
-			writer.writerow([e])
+			t.add_row([e])
+		writer.writerow([t])
 
 	with open('Checkbook.txt', 'a') as fd:
-		fd.write("----------\n")
 		fd.write("Total = ")
 		fd.write(numtotal_2d)
 	
