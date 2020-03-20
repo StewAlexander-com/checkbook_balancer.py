@@ -13,7 +13,7 @@ StartNum_Str = str(StartNum_2d)
 first_row = Org_bal + StartNum_Str
 nlistmin_2d =["$12.50",2,3,4,5]
 
-t= PclerettyTable ([first_row])
+t= PrettyTable ([first_row])
 
 with open('Checkbook.txt', 'a') as f:
 	writer = csv.writer(f)
