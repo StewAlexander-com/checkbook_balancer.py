@@ -65,7 +65,7 @@ Would you like to save this information Y/N?
 Saving data to Checkbook.txt ...
 
 Saved, quitting...
-support@support-VirtualBox ~/Desktop> 
+> 
 
 ```
 **Output of the above (_as of 03/20/2020_) to _Checkbook.txt_** 
