@@ -22,7 +22,7 @@ import os
 # Import PrettyTable for ascii printing
 from prettytable import PrettyTable
 
-# Creating table with function PrettyTable
+# Creating table "t" from function PrettyTable
 t = PrettyTable()
 
 # Variable "nlist" that contains an empty list, isum to get around type issues.
@@ -183,10 +183,17 @@ if saveqt in ['Y','y']:
 	# Create a column with the starting value, the list of inputs, and the total
 	
 	Org_bal = "Org Bal: "
+	
+	# Creating first row, by concatinating the stings, ex. Org Bal: $50.32
+	
 	first_row = Org_bal + StartNum_2d
 	
+	# Entering the string as the first row to the table
+	
 	t = PrettyTable ([first_row])
-
+	
+	# Opening / Creating Checkbook.txt in order to write to it
+	
 	with open('Checkbook.txt', 'a') as f:
 		writer = csv.writer(f)
 		
@@ -206,11 +213,17 @@ if saveqt in ['Y','y']:
 			t.add_row([e])
 		writer.writerow([t])
 
+	# Print total at the end of the table to Checkbook.txt
+		
 	with open('Checkbook.txt', 'a') as fd:
 		fd.write("Total = ")
 		fd.write(numtotal_2d)
 	
+	# Tell the user the data is saved to Checkbook.txt, then gracefully exit the script
+	
 	sys.exit("\nSaved, quitting...")
+
+# If the user doesn't want to save the data to Checkbook.txt, exit gracefully	
 	
 else:
 	sys.exit("\nQuitting...")
