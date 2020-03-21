@@ -23,18 +23,20 @@ Don't know Python? Start [here](https://www.pythoncheatsheet.org/) or [here](htt
 
 **Current output _as of 03/21/2020_**
 
+![Screenshot](https://github.com/StewAlexanderACC/checkbook_balancer.py/blob/master/3-21-ScreenShot.png)
 
-
-**Output of the above (_as of 03/20/2020_) to _Checkbook.txt_** 
+**Output of the above (_as of 03/21/2020_) to _Checkbook.txt_** 
 ```
-> cat Checkbook.txt 
+ > cat  Checkbook.txt
 "+------------------+
-| Org Bal: $500.00 |
+| Org Bal: $200.00 |
 +------------------+
-|     -$100.00     |
-|     -$50.00      |
-|     -$50.00      |
-|     -$100.00     |
+|     -$150.00     |
+|     -$15.00      |
+|     -$23.34      |
+|     -$23.24      |
+|     $200.00      |
+|     -$50.23      |
 +------------------+"
-Total = $200.00           
+Total = $138.19⏎  
 ```
