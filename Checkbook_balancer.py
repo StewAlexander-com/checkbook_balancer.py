@@ -22,6 +22,9 @@ import os
 # Import PrettyTable for ascii printing
 from prettytable import PrettyTable
 
+# Import colors from termcolor
+from termcolor import colored
+
 # Creating table "t" from function PrettyTable
 t = PrettyTable()
 
@@ -42,14 +45,24 @@ s =0
 # The below asks for the original balance, enters it into "StartNum"
 # If the user enters something other than a number, keep asking for one.
 
+# Magenta prompt
+prmpt_magenta = colored("> ",'magenta', attrs=['bold'])
+
+
 # Header
 print("\nThis program very simply balances your checkbook")
 print("It will ask you for your orignal balance and any debits")
 print ("- If you have a deposit, put a minus sign in front of the number")
 
+# Print requirements
+print ("\nThis script requires \"PrettyTable\" and \"Termcolor\" ")
+print ("to work correctly, please install these using pip3, ex:")
+print ("$ pip3 install prettytable\n$ pip3 install termcolor")
+
 while True:
 	try:
-		StartNum = float(input("\nWhat is your orginal balance? > "))
+		print("\nWhat is your orginal balance?")
+		StartNum = float(input(prmpt_magenta))
 	except ValueError:
 		# If the input was something other than a number / float)
 		print ("\n--- Sorry, we didn't understand the input ---\n")
@@ -62,7 +75,8 @@ while True:
 
 while True:
 	try:
-		Num1 = float(input("\nWhat is the first debit (if deposit put a -)? \n> "))
+		print("\nWhat is the first debit (if deposit put a -)? ")
+		Num1 = float(input(prmpt_magenta))
 	except ValueError:
 		print ("\n--- Sorry, we didn't understand the input ---\n")
 	else:
@@ -79,19 +93,22 @@ Num1_2d = locale.currency(Num1, grouping =True)
 isum.append(Num1)
 nlist.append(Num1_2d)
 
+
 # Ask if there is another number to add to the list from the user 
 
 
-a = input("\nAny more debit / deposits? Y/N \n> ")
+print ("\nAny more debits / deposits, Y/N?")
+a = input(prmpt_magenta)
 
 print ("\n")
 
 # If the answer is yes, then request further inputs
 
 if a in ['Y','y']:
-	print ("(Use a \"-\" for deposits, \"=\" when done, or \"q\" to quit)")
+	txtdes = colored("(Use a \"-\" for deposits, \"=\" when done, or \"q\" to quit)", 'green')
+	print (txtdes)
 	while True:
-		amount_input = input(">   ")
+		amount_input = input(prmpt_magenta)
 		
 		# If the amount is a float / number:
 		
@@ -125,7 +142,8 @@ sumlist = sum(isum)
 sumlist_2d = locale.currency(sumlist, grouping =True)
 
 #Printing a dividing line for clarity
-print("\n--------------------------------------------------------------")
+txtline = colored("\n--------------------------------------------------------------",'cyan', attrs=['bold'])
+print(txtline)
 
 #Printing the formatted list, and the formatted total
 if len(nlist) > 4:
@@ -160,15 +178,19 @@ if sumlist > 0:
 else:
 	print (StartNum_2d, "+",depsumlist_2d,"=",numtotal_2d )
 
-print ("\n###################################################")
-print("Total remaining balance =",numtotal_2d)
-print ("###################################################")
-print ("\n")
+red_numtotal = colored(numtotal_2d, 'red', attrs=['bold'])
+yellow_hash = colored("##########################################", 'yellow', 'on_grey')
+
+print("\n")
+print (yellow_hash)
+print("Total remaining balance =",red_numtotal)
+print (yellow_hash, "\n")
 
 #Creating a variable to store the current file location
 Current_chkbtxt = './Checkbook.txt'
 
-saveqt = input ("Would you like to save this information Y/N?\n> ")
+print ("Would you like to save this information Y/N?")
+saveqt = input (prmpt_magenta)
 if saveqt in ['Y','y']:
 	
 	#if the Checkbook.txt exists delete it
