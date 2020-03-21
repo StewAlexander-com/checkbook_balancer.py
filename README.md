@@ -38,5 +38,5 @@ Don't know Python? Start [here](https://www.pythoncheatsheet.org/) or [here](htt
 |     $200.00      |
 |     -$50.23      |
 +------------------+"
-Total = $138.19⏎  
+Total = $138.19 
 ```
