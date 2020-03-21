@@ -209,9 +209,13 @@ if saveqt in ['Y','y']:
 	Org_bal = "Org Bal: "
 	first_row = Org_bal + StartNum_2d
 	
+	#Coloring first row
+	clr_frow = colored(first_row, 'green')
+
+	
 	# Entering the string as the first row to the table
 	
-	t = PrettyTable ([first_row])
+	t = PrettyTable ([clr_frow])
 	
 	# Opening / Creating Checkbook.txt in order to write to it
 	
@@ -238,7 +242,7 @@ if saveqt in ['Y','y']:
 		
 	with open('Checkbook.txt', 'a') as fd:
 		fd.write("Total = ")
-		fd.write(numtotal_2d)
+		fd.write(red_numtotal)
 	
 	# Tell the user the data is saved to Checkbook.txt, then gracefully exit the script
 	
