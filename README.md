@@ -16,7 +16,7 @@ PrettyTable and Termcolor, to install: <br>
 - [x] Gives user ability to save final results to a file
 - [x] Take data and print it using the "pretty table" library (looks better on screen, creates room for future development)<br>
     _See https://ptable.readthedocs.io/en/latest/tutorial.html_
-- [x] Added terminal colors!    
+- [x] Added colors!    
 - [ ] Functionalize code (make function calls within switch statements and loops)
 - [ ] Give user ability to edit mistakes
 
@@ -32,4 +32,6 @@ PrettyTable and Termcolor, to install: <br>
 
 **Output of the above (_as of 03/21/2020_) to _Checkbook.txt_** 
 
- ```> cat  Checkbook.txt```
+ ```> cat  Checkbook.txt``` <br>
+ 
+![Checkbook_output](https://github.com/StewAlexanderACC/checkbook_balancer.py/blob/master/chkbk_out-3-21.png)
