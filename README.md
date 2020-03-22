@@ -16,10 +16,11 @@ PrettyTable and Termcolor, to install: <br>
 - [x] Gives user ability to save final results to a file
 - [x] Take data and print it using the "pretty table" library (looks better on screen, creates room for future development)<br>
     _See https://ptable.readthedocs.io/en/latest/tutorial.html_
-- [x] Added colors!    
+- [x] Added colors! <br>
+ _Unfortunately color ASCII sequences show up if you open the txt file with an editor, working on this_
 - [ ] Functionalize code (make function calls within switch statements and loops)
-- [ ] Give user ability to edit mistakes
-
+- [ ] Give user ability to edit mistakes <br>
+   
 ----
 ### Long term goals
 - [ ] Use the ncurses library to provide a graphical interface for the command line
