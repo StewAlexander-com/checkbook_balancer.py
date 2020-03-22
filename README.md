@@ -5,6 +5,11 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 
 Don't know Python? Start [here](https://www.pythoncheatsheet.org/) or [here](https://github.com/gto76/python-cheatsheet) 
 
+**Requires**: <br>
+PrettyTable and Termcolor, to install: <br>
+- ```$ pip3 install prettytable```
+- ```$ pip3 install termcolor``
+
 - [x] Assumes user wants to add another number until equal sign is typed (tells user this behavior up front)
 - [x] Gives user the ability to quit with “q”
 - [x] If list of debits / deposits is greater than 4, send each formatted amount to a new line
