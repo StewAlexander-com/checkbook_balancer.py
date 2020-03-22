@@ -54,10 +54,6 @@ print("\nThis program very simply balances your checkbook")
 print("It will ask you for your orignal balance and any debits")
 print ("- If you have a deposit, put a minus sign in front of the number")
 
-# Print requirements
-print ("\nThis script requires \"PrettyTable\" and \"Termcolor\" ")
-print ("to work correctly, please install these using pip3, ex:")
-print ("$ pip3 install prettytable\n$ pip3 install termcolor")
 
 while True:
 	try:
@@ -155,11 +151,14 @@ else:
 	print ("\nThe numbers you entered are:", nlist)
 
 if sumlist > 0:
-	print ("A Total debit of: ",sumlist_2d)
+	red_sumlst = colored(sumlist_2d, 'red')
+	print ("A total debit of: ",red_sumlst)
 else:
 	dep_sumlist = - sumlist
 	depsumlist_2d = locale.currency(dep_sumlist, grouping =True)
-	print ("A total deposit of: ",depsumlist_2d)
+	cyan_depsumlst = colored(depsumlist_2d, 'cyan')
+	print ("A total deposit of: ",cyan_depsumlst)
+	
 	
 #Subtract the "sumlist" (unformatted) from the "StartNum", save in in variable "numtotal" 
 numtotal = StartNum - sumlist
