@@ -27,9 +27,9 @@ PrettyTable and Termcolor, to install: <br>
 - [ ] Add other functions outside of sum (avg, mode, median, etc)
 
 
-**Current output _as of 03/21/2020_**
+**Current output _as of 03/22/2020_**
 
-![Screenshot](https://github.com/StewAlexanderACC/checkbook_balancer.py/blob/master/3-21-ScreenShot.png)
+![Screenshot](https://github.com/StewAlexanderACC/checkbook_balancer.py/blob/master/Capt-3-22.png)
 
 **Output of the above (_as of 03/21/2020_) to _Checkbook.txt_** 
 
