@@ -31,17 +31,5 @@ PrettyTable and Termcolor, to install: <br>
 ![Screenshot](https://github.com/StewAlexanderACC/checkbook_balancer.py/blob/master/3-21-ScreenShot.png)
 
 **Output of the above (_as of 03/21/2020_) to _Checkbook.txt_** 
-```
- > cat  Checkbook.txt
-"+------------------+
-| Org Bal: $200.00 |
-+------------------+
-|     -$150.00     |
-|     -$15.00      |
-|     -$23.34      |
-|     -$23.24      |
-|     $200.00      |
-|     -$50.23      |
-+------------------+"
-Total = $138.19 
-```
+
+ ```> cat  Checkbook.txt```
