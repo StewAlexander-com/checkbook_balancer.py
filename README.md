@@ -31,8 +31,8 @@ PrettyTable and Termcolor, to install: <br>
 
 ![Screenshot](https://github.com/StewAlexanderACC/checkbook_balancer.py/blob/master/Capt-3-22.png)
 
-**Output of the above (_as of 03/21/2020_) to _Checkbook.txt_** 
+**Output of the above (_as of 03/22/2020_) to _Checkbook.txt_** 
 
  ```> cat  Checkbook.txt``` <br>
  
-![Checkbook_output](https://github.com/StewAlexanderACC/checkbook_balancer.py/blob/master/chkbk_out-3-21.png)
+![Checkbook_output](https://github.com/StewAlexanderACC/checkbook_balancer.py/blob/master/chkbk-3-22.png)
