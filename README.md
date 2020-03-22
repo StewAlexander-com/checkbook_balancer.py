@@ -18,8 +18,7 @@ PrettyTable and Termcolor, to install: <br>
     _See https://ptable.readthedocs.io/en/latest/tutorial.html_
 - [x] Added colors! <br>
  _Unfortunately color ASCII sequences show up if you open the txt file with an editor, working on this_
-- [ ] Functionalize code (make function calls within switch statements and loops)
-- [ ] Give user ability to edit mistakes <br>
+- [x] Run the program by downloading the **checkbook** program, and typing ```$./checkbook``` in the folder it is located
    
 ----
 ### Long term goals
