@@ -11,11 +11,13 @@ PrettyTable and Termcolor, to install: <br>
 - ```$ pip3 install termcolor```
 <br>
 <h3> How to run the program </h2>
+
 - In any Linux or Mac environment by downloading "checkbook"
-- Run the command ``chmod +x checkbook```
+- Run the command ```chmod +x checkbook```
 - Then start the program by ```$./checkbook```
 <br>
 <h3> Project Milestones and goals ...</h3>
+
 - [x] Assumes user wants to add another number until equal sign is typed (tells user this behavior up front)
 - [x] Gives user the ability to quit with “q”
 - [x] If list of debits / deposits is greater than 4, send each formatted amount to a new line
