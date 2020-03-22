@@ -13,7 +13,7 @@ PrettyTable and Termcolor, to install: <br>
 
 <h3> How to run the program </h2>
 
-- Download the **checkbook** app on any _Linux_ or _Mac_
+- Download the [**checkbook**]() app on any _Linux_ or _Mac_
 - Run the command ```$ chmod +x checkbook```
 - Then start the program by ```$ ./checkbook```
 
