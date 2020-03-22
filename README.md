@@ -9,13 +9,13 @@ Don't know Python? Start [here](https://www.pythoncheatsheet.org/) or [here](htt
 PrettyTable and Termcolor, to install: <br>
 - ```$ pip3 install prettytable```
 - ```$ pip3 install termcolor```
-<br>
+
 <h3> How to run the program </h2>
 
 - In any Linux or Mac environment by downloading "checkbook"
 - Run the command ```chmod +x checkbook```
 - Then start the program by ```$./checkbook```
-<br>
+
 <h3> Project Milestones and goals ...</h3>
 
 - [x] Assumes user wants to add another number until equal sign is typed (tells user this behavior up front)
