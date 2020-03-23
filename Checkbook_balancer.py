@@ -169,6 +169,13 @@ numtotal_2d = locale.currency(numtotal, grouping =True)
 # Formatting "StartNum" for printing purposes
 StartNum_2d = locale.currency(StartNum, grouping =True)
 
+
+if numtotal > 0:
+	numtotal_2d =colored(numtotal_2d, 'cyan')
+else:
+	numtotal_2d = colored(numtotal_2d, 'red') 
+
+
 # Printing the orginal balance - the sum (formatted), = the total (formatted)
 print("\n")
 print ("From what you entered:")
@@ -177,12 +184,11 @@ if sumlist > 0:
 else:
 	print (StartNum_2d, "+",depsumlist_2d,"=",numtotal_2d )
 
-red_numtotal = colored(numtotal_2d, 'red', attrs=['bold'])
 yellow_hash = colored("##########################################", 'yellow', 'on_grey')
 
 print("\n")
 print (yellow_hash)
-print("Total remaining balance =",red_numtotal)
+print("Total remaining balance =",numtotal_2d)
 print (yellow_hash, "\n")
 
 #Creating a variable to store the current file location
