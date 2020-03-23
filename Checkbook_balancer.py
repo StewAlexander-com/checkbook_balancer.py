@@ -247,7 +247,7 @@ if saveqt in ['Y','y']:
 		
 	with open('Checkbook.txt', 'a') as fd:
 		fd.write("Total = ")
-		fd.write(red_numtotal)
+		fd.write(numtotal_2d)
 	
 	# Tell the user the data is saved to Checkbook.txt, then gracefully exit the script
 	
