@@ -1,7 +1,7 @@
 # Checkbook.py
 [![Run on Repl.it](https://repl.it/badge/github/StewAlexanderACC/checkbook_balancer.py)](https://repl.it/github/StewAlexanderACC/checkbook_balancer.py)
 ---
-
+</br>
 A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resources/mistake-proofing
 ) principles <br>
 
