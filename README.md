@@ -1,4 +1,4 @@
-# Checkbook.py
+# Checkbook Balancer (ledger) Python App
 [![Run on Repl.it](https://repl.it/badge/github/StewAlexanderACC/checkbook_balancer.py)](https://repl.it/github/StewAlexanderACC/checkbook_balancer.py)
 ---
 </br>
