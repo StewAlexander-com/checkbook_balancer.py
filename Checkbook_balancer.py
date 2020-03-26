@@ -169,6 +169,8 @@ numtotal_2d = locale.currency(numtotal, grouping =True)
 # Formatting "StartNum" for printing purposes
 StartNum_2d = locale.currency(StartNum, grouping =True)
 
+# If numtotal (the final total) is greater than 0 color it
+#cyan, otherwise if the balanance is negative color it red 
 
 if numtotal > 0:
 	numtotal_2d =colored(numtotal_2d, 'cyan')
