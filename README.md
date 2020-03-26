@@ -20,8 +20,7 @@ PrettyTable and Termcolor, to install: <br>
 - Download the [**checkbook**](https://github.com/StewAlexanderACC/checkbook_balancer.py/blob/master/checkbook) app on any _Linux_ or _Mac_
 - Run the command ```$ chmod +x checkbook```
 - Then start the program by ```$ ./checkbook```
-- Demo it by clicking on the below link </br>
-[![Run on Repl.it](https://repl.it/badge/github/StewAlexanderACC/checkbook_balancer.py)](https://repl.it/github/StewAlexanderACC/checkbook_balancer.py)
+- [![Run on Repl.it](https://repl.it/badge/github/StewAlexanderACC/checkbook_balancer.py)](https://repl.it/github/StewAlexanderACC/checkbook_balancer.py) (Demo)
 
 <h3> Project Milestones and goals ...</h3>
 
