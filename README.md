@@ -32,6 +32,7 @@ PrettyTable and Termcolor, to install: <br>
  _Unfortunately color ASCII sequences show up if you open the txt file with an editor, working on this_
 - [x] Run the program by downloading the **checkbook** program, and following the run instructions above
 - [x] Updated error handling (3/29/2020)
+- [x] If the final balance is greater than 0 it is printed in blue, otherwise if the final balance is negative, it is printed in red for clarity.
    
 ----
 ### Long term goals
