@@ -8,7 +8,7 @@ A simple checkbook program that uses [poka-yoke](https://asq.org/quality-resourc
 Don't know Python? Start [here](https://www.pythoncheatsheet.org/) or [here](https://github.com/gto76/python-cheatsheet) 
 
 **Requires**: <br>
-Any Linux or Mac system <br>
+Any Linux or Mac Desktop / Server computer system <br>
 PrettyTable and Termcolor, to install: <br>
 - ```$ pip3 install prettytable```
 - ```$ pip3 install termcolor```
@@ -16,8 +16,8 @@ PrettyTable and Termcolor, to install: <br>
 <h3> How to run the program </h2>
 
 - Download the [**checkbook**](https://github.com/StewAlexanderACC/checkbook_balancer.py/blob/master/checkbook) app on any _Linux_ or _Mac_
-- Run the command ```$ chmod +x checkbook```
-- Then start the program by ```$ ./checkbook```
+- Run the command ```$ chmod +x checkbook``` from the Macintosh or Linux Terminal screen
+- Then start the program by ```$ ./checkbook``` (again from the terminal screen)
 - [![Run on Repl.it](https://repl.it/badge/github/StewAlexanderACC/checkbook_balancer.py)](https://repl.it/github/StewAlexanderACC/checkbook_balancer.py) (Demo)
 
 <h3> Project Milestones and goals ...</h3>
