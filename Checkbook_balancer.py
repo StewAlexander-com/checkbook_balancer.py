@@ -40,6 +40,9 @@ StartNum =0
 a =0
 # Variable "s" to hold the next number value in the list
 s =0
+# initializing saving variable (used at end)
+saveqt = 0
+
 # Everything with "*_2d" is a variable to hold the amount formatted in US dollars
 
 # The below asks for the original balance, enters it into "StartNum"
@@ -48,12 +51,15 @@ s =0
 # Magenta prompt
 prmpt_magenta = colored("> ",'magenta', attrs=['bold'])
 
+# Sorry response, used when user types junk
+sorry = colored("\n--- Sorry, didn't understand the input ---\n", 'yellow', 'on_grey')
 
 # Header
 print("\nThis program very simply balances your checkbook")
 print("It will ask you for your orignal balance and any debits")
 print ("- If you have a deposit, put a minus sign in front of the number")
 
+#Error check the original balannce
 
 while True:
 	try:
@@ -61,7 +67,7 @@ while True:
 		StartNum = float(input(prmpt_magenta))
 	except ValueError:
 		# If the input was something other than a number / float)
-		print ("\n--- Sorry, we didn't understand the input ---\n")
+		print (sorry)
 	else:
 		# no error, stop the loop
 		break	
@@ -74,7 +80,7 @@ while True:
 		print("\nWhat is the first debit (if deposit put a -)? ")
 		Num1 = float(input(prmpt_magenta))
 	except ValueError:
-		print ("\n--- Sorry, we didn't understand the input ---\n")
+		print (sorry)
 	else:
 		# no error, stop the loop
 		break
@@ -90,11 +96,18 @@ isum.append(Num1)
 nlist.append(Num1_2d)
 
 
-# Ask if there is another number to add to the list from the user 
+# Ask if there is another number to add to the list from the user, repeat if junk
 
-
-print ("\nAny more debits / deposits, Y/N?")
-a = input(prmpt_magenta)
+while a in ['Y', 'y'] or ['N', 'n']:	
+	print ("\nAny more debits / deposits, Y/N?")
+	a = input(prmpt_magenta)
+	
+	if a in ['Y', 'y']:
+		break
+	elif a in ['N', 'n']:
+		break	
+	else:
+		print (sorry)
 
 print ("\n")
 
@@ -129,7 +142,7 @@ if a in ['Y','y']:
 		#if the input is junk:
 				
 			else:
-				print ("\n--- Sorry we didn't understand the input ---\n")
+				print (sorry)
 
 #Sum the list (to get around type issues, using the unformatted "s" list in "isum")
 sumlist = sum(isum)
@@ -196,8 +209,21 @@ print (yellow_hash, "\n")
 #Creating a variable to store the current file location
 Current_chkbtxt = './Checkbook.txt'
 
-print ("Would you like to save this information Y/N?")
-saveqt = input (prmpt_magenta)
+
+# Ask the user if they wish to save the data; if not quit, repeat with 'sorry' var, if junk
+while saveqt in ['Y', 'y'] or ['N', 'n']:
+	print ("Would you like to save this information Y/N?")
+	saveqt = input (prmpt_magenta)
+	
+	if saveqt in ['Y', 'y']:
+		break
+	elif saveqt in ['N', 'n']:
+		break	
+	else:
+		print (sorry)
+
+# if the user typed 'Y' or 'y' save the data to Checkbook.txt
+
 if saveqt in ['Y','y']:
 	
 	#if the Checkbook.txt exists delete it
