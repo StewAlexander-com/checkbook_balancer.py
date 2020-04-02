@@ -33,6 +33,7 @@ PrettyTable and Termcolor, to install: <br>
 - [x] Run the program by downloading the **checkbook** program, and following the run instructions above
 - [x] Updated error handling (3/29/2020)
 - [x] If the final balance is greater than 0 it is printed in blue, otherwise if the final balance is negative, it is printed in red for clarity.
+- [ ] Ability to edit one of the typed in amounts if done erroneously (see [here]() for progress)
    
 ----
 ### Long term goals
