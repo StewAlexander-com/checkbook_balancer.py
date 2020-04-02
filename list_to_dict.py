@@ -23,12 +23,15 @@ print ("value pair =", valpair)
 
 
 # Need to build a dictionary where a is the key, and valpair is the value pair (done)
-# Ask customer to modify the value to the key
+# Ask customer to modify the value to the key (done)
 # Clear the orginal list alist and replace it with the a new value pair list created by the user
 # Continue on with the new values in alist
 
 moneyd = dict(zip(key, valpair))  # takes the lists key and valpair, and stores them as a dictionary
 print("dictionary".rstrip(), '=', moneyd)
+
+
+# This needs to be in a loop
 
 print("\nWhich value would you like to change, please type the number that corresponds to the value")
 key_input = str(input("> "))
@@ -37,7 +40,7 @@ moneyd_key = moneyd[key_input]
 
 print (key_input, "=".strip(), moneyd_key)
 
-valchange = str(input("What is the value you would like to change it to?\n> "))
+valchange = str(input("\nWhat is the value you would like to change it to?\n> "))
 
 
 # modifying elements of a dictionary
