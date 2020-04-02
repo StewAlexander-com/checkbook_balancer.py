@@ -30,20 +30,44 @@ print ("value pair =", valpair)
 moneyd = dict(zip(key, valpair))  # takes the lists key and valpair, and stores them as a dictionary
 print("dictionary".rstrip(), '=', moneyd)
 
+# Loops
 
-# This needs to be in a loop
+more_val = 'y'
 
-print("\nWhich value would you like to change, please type the number that corresponds to the value")
-key_input = str(input("> "))
-
-moneyd_key = moneyd[key_input]
-
-print (key_input, "=".strip(), moneyd_key)
-
-valchange = str(input("\nWhat is the value you would like to change it to?\n> "))
+more_val = input(str("\nWould you like to change a value? Y/N?\n> "))
 
 
-# modifying elements of a dictionary
-moneyd[key_input] = valchange
-print (key_input, f"is now \"{valchange}\"")
-print(moneyd)
+while more_val in ['Y', 'y'] or ['N', 'n']:
+
+	if more_val in ['Y', 'y']:
+
+		print("\nWhich value would you like to change, please type the number that corresponds to the value")
+		key_input = str(input("> "))
+
+a		# To add: If the key_input is a key in moneyd dict do the following, else print "the value entered does not appear in the list", and re-ask
+
+		moneyd_key = moneyd[key_input]
+
+		print (key_input, "=".strip(), moneyd_key)
+
+		valchange = str(input("\nWhat is the value you would like to change it to?\n> "))
+
+		# To add: accept only numeric floats, if not a float, request the user to type a number
+
+		# modifying elements of a dictionary
+		moneyd[key_input] = valchange
+		print (key_input, f"is now \"{valchange}\"\n")
+		print(moneyd)
+		more_val = input(str("\nWould you like to change another value? Y/N?\n> "))
+
+	elif more_val in ["N", "n"]:
+		print("\nok")
+		break
+	else:
+		print("\nSorry didn't understand the input\n")
+		more_val = input(str("\nWould you like to change another value? Y/N?\n> "))
+
+print("\nfinal dictionary is =", moneyd)
+
+
+
