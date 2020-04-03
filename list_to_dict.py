@@ -44,13 +44,15 @@ while more_val in ['Y', 'y'] or ['N', 'n']:
 		print("\nWhich value would you like to change, please type the number that corresponds to the value")
 		key_input = str(input("> "))
 
-a		# To add: If the key_input is a key in moneyd dict do the following, else print "the value entered does not appear in the list", and re-ask
-
-		moneyd_key = moneyd[key_input]
-
-		print (key_input, "=".strip(), moneyd_key)
-
-		valchange = str(input("\nWhat is the value you would like to change it to?\n> "))
+		if key_input in moneyd:
+			mk = moneyd[key_input]
+			print (key_input, "=".strip(), mk)
+			valchange = str(input("\nWhat is the value you would like to change it to?\n> "))
+		else:
+			print("\nThe value entered is not a listed number")
+			print("\nWhich value would you like to change, please type the number that corresponds to the value")
+			key_input = str(input("> "))
+			valchange = str(input("\nWhat is the value you would like to change it to?\n> "))
 
 		# To add: accept only numeric floats, if not a float, request the user to type a number
 
