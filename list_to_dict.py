@@ -37,7 +37,6 @@ more_val = 'y'
 
 more_val = input(str("\nWould you like to change a value? Y/N?\n> "))
 
-
 while more_val in ['Y', 'y'] or ['N', 'n']:
 
 	if more_val in ['Y', 'y']:
