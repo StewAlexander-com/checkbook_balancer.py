@@ -25,7 +25,6 @@ def valprint():
 		a = a + 1  # Ups the amount stored in "a for every value stored in alist, so as to create a key that = (1,2,3,4,5,6)
 	return (key, valpair)
 
-
 print("\nThe original values are:")
 valprint()  # Runs the function above, produces output easy to view for the user of "1.a, 2.b" etc)
 
