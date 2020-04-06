@@ -1,34 +1,35 @@
 #!/usr/bin/env python3
 
-# This program takes list "alist", createss a list of numbers (i_alist) = to alist, and stores them as a dictionary
-# for example if the key list is (a,b,c,d) valpair is then (1,2,3,4), and moneyd (the dictionary containing key / valpair) is ('1':'a', '2':'b', etc)
-# Then it prints the list, and asks the customer if they want to change a value to the list, asks for the value, and stores it alist
+# This program takes in alist, creates a dictionary (moneyd) of an element list that = alist, and the alist values.
+# Example: it takes "a","b","c","d","e" and "f", and creates 1,2,3,4,5,6; so that the dictionary
+# has these key, value pairs {1:"a", 2:"b", 3:"c", 4:"d", 5:"e", 6:"f"}
+# Then it requests the user to type in a key so as to edit its value pair
+# (as in type in "1" and replace "a" with "hi")
+# Then it takes the updated values and if they are different than the original list, replaces alist with these new
+# values such that alist is now updated with the new values the user wants.
+# By: Stewart Alexander 
 
 alist = ["a", "b", "c", "d", "e", "f"]
 key = []
 valpair = []
-a = 1
-b = '.'
 
-for i in range(len(alist)):
-	a_str = str(a)  # Converts the value stored in "a" to a string
-	i_alist = alist[i]  # i_alist = element value of alist, so a = 1, b = 2, c = 3, etc
-	key.append(a_str)  # Append the amount stored in "a" (a list of numbers starting at 1), to the list key
-	valpair.append(i_alist)  # Append each element of list "alist"to list valpair, this is done for later, (a,b,c,etc)
-	print(a_str + b, i_alist)  # Print the value in a_str (1,2,3, etc), followed by a ".", and the elements in i_alist (a,b,c) followed by a new line (1. a, 2. b, etc)
-	a = a + 1  # Ups the amount stored in "a for every value stored in alist, so as to create a key that = (1,2,3,4,5,6)
+def valprint():
+	a = 1
+	b = '.'
+	for i in range(len(alist)):
+		a_str = str(a)  # Converts the value stored in "a" to a string
+		i_alist = alist[i]  # i_alist = element value of alist, so a = 1, b = 2, c = 3, etc
+		key.append(a_str)  # Append the amount stored in "a" (a list of numbers starting at 1), to the list key
+		valpair.append(i_alist)  # Append each element of list "alist"to list valpair, this is done for later, (a,b,c,etc)
+		print(a_str + b, i_alist)  # Print the value in a_str (1,2,3, etc), followed by a ".", and the elements in i_alist (a,b,c) followed by a new line (1. a, 2. b, etc)
+		a = a + 1  # Ups the amount stored in "a for every value stored in alist, so as to create a key that = (1,2,3,4,5,6)
+	return (key, valpair)
 
-print("key =", key)
-print ("value pair =", valpair)
 
-
-# Need to build a dictionary where a is the key, and valpair is the value pair (done)
-# Ask customer to modify the value to the key (done)
-# Clear the orginal list alist and replace it with the a new value pair list created by the user
-# Continue on with the new values in alist
+print("\nThe original values are:")
+valprint()  # Runs the function above, produces output easy to view for the user of "1.a, 2.b" etc)
 
 moneyd = dict(zip(key, valpair))  # takes the lists key and valpair, and stores them as a dictionary
-print("dictionary".rstrip(), '=', moneyd)
 
 # Loops
 
@@ -58,18 +59,26 @@ while more_val in ['Y', 'y'] or ['N', 'n']:
 
 		# modifying elements of a dictionary
 		moneyd[key_input] = valchange
-		print (key_input, f"is now \"{valchange}\"\n")
-		print(moneyd)
+		print("\n")
+		print (key_input.strip(), f" is now \"{valchange}\"\n".strip())
 		more_val = input(str("\nWould you like to change another value? Y/N?\n> "))
 
 	elif more_val in ["N", "n"]:
-		print("\nok")
 		break
 	else:
 		print("\nSorry didn't understand the input\n")
 		more_val = input(str("\nWould you like to change another value? Y/N?\n> "))
 
-print("\nfinal dictionary is =", moneyd)
 
+new_alist = list(moneyd.values())  # takes the value pairs of the updated dictionary and replaces alist with these values
 
+check_lists = all(item in new_alist for item in alist)  # compares the lists
 
+# If there were any changes to the liist, set the alist to the changes in new_alist
+
+if check_lists is True:
+	print ("\nOk, so no changes ...")
+else:
+	print("\nThe Updated list is:")
+	alist = new_alist  # replaces alist with the new_alist, so as to continue
+	valprint()  # reprints the new list in a way that is pleasing to the eye
