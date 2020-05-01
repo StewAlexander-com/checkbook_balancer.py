@@ -20,6 +20,9 @@ PrettyTable and Termcolor, to install: <br>
 - Then start the program by ```$ ./checkbook``` (again from the terminal screen)
 - [![Run on Repl.it](https://repl.it/badge/github/StewAlexanderACC/checkbook_balancer.py)](https://repl.it/github/StewAlexanderACC/checkbook_balancer.py) (Demo)
 
+<h3> Video on how to use it </h3>
+https://youtu.be/jkXU7cvhvMA
+
 <h3> Project Milestones and goals ...</h3>
 
 - [x] Assumes user wants to add another number until equal sign is typed (tells user this behavior up front)
