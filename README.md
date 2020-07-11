@@ -10,6 +10,7 @@ Don't know Python? Start [here](https://www.pythoncheatsheet.org/) or [here](htt
 **Requires**: <br>
 Any Linux or Mac Desktop / Server computer system <br>
 PrettyTable and Termcolor, to install: <br>
+Python 3 
 - ```$ pip3 install prettytable```
 - ```$ pip3 install termcolor```
 
